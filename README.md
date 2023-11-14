@@ -1,4 +1,4 @@
-Passos para executar essa Automação de Testes
+*Passos para executar essa Automação de Testes*
 
 Através desse readme vou está explicando como baixar, configurar e executar esse projeto de automação de testes do site saucedemo, lembrando, esse teste tem o intuito de aprendizado.
 
