@@ -1,4 +1,4 @@
-name: Seu Fluxo de Trabalho
+name: SwagLabs Selenium Automation
 
 on:
   push:
@@ -10,27 +10,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout do Código
+    - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Configurar java
+    - name: Set up JDK
       uses: actions/setup-java@v2
+      with:
+        distribution: 'adopt'
+        java-version: '11'
 
-    - name: Configurar Chromedriver
-      run: |
-        echo "Configurando Chromedriver"
-        echo "Chromedriver Path: C:\\Windows\\JavaIDE\\chromedriver.exe"
-        dir C:\\Windows\\JavaIDE  # Lista os arquivos no diretório para fins de verificação
+    - name: Build with Maven
+      run: mvn clean test
 
     - name: Ajustar Permissões do Chromedriver
-      run: chmod +x C:\\Windows\\JavaIDE\\chromedriver.exe
-        # Adicione este passo apenas se necessário
-        # chmod +x C:\\Windows\\JavaIDE\\chromedriver.exe
-
-    - name: Executar Testes
-      run: mvn test -Dtest
-        # Comandos para executar seus testes aqui
-        # Exemplo: mvn test -Dtest=NomeDoTeste
-
-    - name: Finalizar
-      run: echo "Testes concluídos"
+      run: chmod +x caminho/relativo/para/chromedriver.exe
