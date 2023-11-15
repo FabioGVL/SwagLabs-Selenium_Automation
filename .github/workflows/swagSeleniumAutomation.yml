@@ -13,8 +13,8 @@ jobs:
     - name: Checkout do Código
       uses: actions/checkout@v2
 
-    - name: Configurar Chrome
-      uses: actions/setup-chrome@v2
+    - name: Configurar java
+      uses: actions/setup-java@v2
 
     - name: Configurar Chromedriver
       run: |
