@@ -3,11 +3,11 @@ name: Seu Fluxo de Trabalho
 on:
   push:
     branches:
-      - master  # Adapte para o nome da sua branch principal
+      - master
 
 jobs:
   test:
-    runs-on: ubuntu-latest  # Você pode ajustar o sistema operacional conforme necessário
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout do Código
@@ -23,12 +23,12 @@ jobs:
         dir C:\\Windows\\JavaIDE  # Lista os arquivos no diretório para fins de verificação
 
     - name: Ajustar Permissões do Chromedriver
-      run: |
+      run: chmod +x C:\\Windows\\JavaIDE\\chromedriver.exe
         # Adicione este passo apenas se necessário
         # chmod +x C:\\Windows\\JavaIDE\\chromedriver.exe
 
     - name: Executar Testes
-      run: |
+      run: mvn test -Dtest
         # Comandos para executar seus testes aqui
         # Exemplo: mvn test -Dtest=NomeDoTeste
 
