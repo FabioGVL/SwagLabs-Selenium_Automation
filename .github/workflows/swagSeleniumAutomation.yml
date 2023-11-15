@@ -21,6 +21,3 @@ jobs:
 
     - name: Build with Maven
       run: mvn clean test
-
-    - name: Ajustar Permissões do Chromedriver
-      run: chmod +x caminho/relativo/para/chromedriver.exe
