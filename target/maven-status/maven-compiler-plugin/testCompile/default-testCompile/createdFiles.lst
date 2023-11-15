@@ -1,3 +1,2 @@
-features\teste_de_login.feature
 runners\TestRunner.class
 steps\TesteDeLoginSteps.class

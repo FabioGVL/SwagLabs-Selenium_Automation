@@ -21,7 +21,7 @@ public class TesteDeLoginSteps{
     public void inicio(){
 
         System.setProperty("webdriver.chrome.driver",
-                "C:\\Users\\Fabinho\\Desktop\\JavaIDE\\chromedriver.exe");
+                "C:\\Windows\\chromedriver.exe");
 
         robozinho = new ChromeDriver();
         robozinho.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
