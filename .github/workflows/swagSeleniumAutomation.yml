@@ -11,10 +11,10 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@latest-version
+      uses: actions/checkout@v2
 
     - name: Set up JDK
-      uses: actions/setup-java@latest-version
+      uses: actions/setup-java@v2
       with:
         distribution: 'adopt'
         java-version: '11'
