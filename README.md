@@ -1,6 +1,6 @@
 # Passos para executar essa Automação de Testes
 
-Este projeto tem intuito didático. Nele, aprenderemos a configurar e realizar testes automatizados de um sistema ecommerce utilizando a linguagem JAVA e os frameworks de automação Selenium, Cucumber e Junit.
+Este projeto tem intuito didático. Nele, aprenderemos a configurar e realizar testes automatizados de um sistema e-commerce utilizando a linguagem de programação JAVA e os frameworks de automação Selenium, Cucumber e Junit.
 
 **URL do site:** https://www.saucedemo.com/
 
