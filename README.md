@@ -1,6 +1,6 @@
 # Passos para executar essa Automação de Testes
 
-Através desse readme vou está explicando como baixar, configurar e executar esse projeto de automação de testes do site saucedemo, lembrando, esse teste tem o intuito de aprendizado.
+Este projeto tem intuito didático. Nele, aprenderemos a configurar e realizar testes automatizados de um sistema ecommerce utilizando a linguagem JAVA e os frameworks de automação Selenium, Cucumber e Junit.
 
 **URL do site:** https://www.saucedemo.com/
 
