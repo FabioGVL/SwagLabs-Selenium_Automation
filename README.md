@@ -1,43 +1,53 @@
-# Passos para executar essa Automação de Testes
+#  PROJETO DE AUTOMAÇÃO: SWAG LABS (JAVA & SELENIUM BDD)
 
-Este projeto tem intuito didático. Nele, aprenderemos a configurar e realizar testes automatizados de um sistema e-commerce utilizando a linguagem de programação JAVA e os frameworks de automação Selenium, Cucumber e Junit, utilizando a sintaxe Gherkin.
+##  1. OBJETIVO DO DOCUMENTO
+Este documento detalha a estratégia de automação de testes para a plataforma **Swag Labs**, utilizando o ecossistema Java. O foco é a validação do fluxo de autenticação através do Desenvolvimento Orientado a Comportamento (**BDD**), garantindo que as regras de negócio de login sejam respeitadas tanto em cenários de sucesso quanto em tentativas inválidas (campos vazios, dados incorretos e caracteres especiais).
 
-**URL do site:** https://www.saucedemo.com/
+##  2. TECNOLOGIAS UTILIZADAS
+* **Linguagem:** Java 11
+* **Framework de Automação:** [Selenium WebDriver](https://www.selenium.dev/) (v4.15.0)
+* **BDD/Gherkin:** [Cucumber Java](https://cucumber.io/) (v7.14.0)
+* **Runner & Assertions:** [JUnit 5](https://junit.org/junit5/)
+* **Gerenciador de Dependências:** Maven
+* **IDE:** VS Code (com Extension Pack for Java)
 
-# Tecnologias do projeto
+##  3. ARQUITETURA E ESTRUTURA
+O projeto segue o padrão de separação de responsabilidades para garantir manutenibilidade:
 
- - Linguagem de programação Java 11
- - Framework JUnit Jupiter 4.8.2
- - Framework Selenium WebDriver 4.8.3
- - Framework Cucumber Java 7.11.0
- - Framework Cucumber JUnit 7.11.0
- - Biblioteca WebDriverManeger 5.5.3
+* **Behavior Driven Development (BDD):** Escrita de cenários em linguagem natural (Português) utilizando arquivos `.feature`, facilitando a comunicação entre o time técnico e de negócios.
+* **Data-Driven Testing (Gherkin Examples):** Implementação de uma matriz de testes no arquivo de feature, permitindo a execução de múltiplos casos de teste (sucesso, falha, borda) reutilizando os mesmos steps.
+* **Cucumber Hooks:** Uso de `@Before` e `@After` para gerenciar o ciclo de vida do WebDriver, garantindo que o navegador seja aberto e fechado corretamente em cada cenário.
+* **Wait Strategies:** Implementação de `Implicit Wait` para lidar com a latência de renderização de elementos web.
+* **Maven Lifecycle:** Configuração do `maven-surefire-plugin` para possibilitar a execução dos testes via linha de comando e integração com ferramentas de CI/CD.
 
-# Pré-requisitos
 
- 1. Java JDK 11 instalado
- 2. Configurar as variáveis de ambiente JAVA_HOME
- 3. Visual Studio Code na versão 1.84 ou superior instalado
- 4. Plugin do VS code Extension Pack for Java instalado
- 5. Plugin do VS code Cucumber instalado
 
-# Passo a passo 
+##  4. COMO EXECUTAR O PROJETO
 
- 1. Clique em "code" 
- 2. Clique em "Download Zip" para baixar arquivo zipado
- 3. Acesse a área de Downloads do seu PC
- 4. Encontre o arquivo zipado baixado
- 5. Descompacte/extraia a pasta do arquivo zipado
- 6. Abra o Visual Studio Code
- 7. Clique em arquivo/file 
- 8. Clique em abrir pasta/open folder
- 9. Escolha a pasta do arquivo descompactado
- 10. No Visual Studio Code, acesse a pasta src>test>runner
- 11. Dentro da pasta runner, acesse o arquvo TestRunner.java
- 12. Ao lado da linha 13, clique no Icone de play para executar o projeto
+### **Pré-requisitos**
+* Java JDK 11 (Configurado no `JAVA_HOME`)
+* Maven instalado
+* ChromeDriver compatível com a sua versão do navegador Chrome (posicionado no caminho configurado em `System.setProperty`)
+* Java JDK 11 instalado
+* Configurar as variáveis de ambiente JAVA_HOME
+* Visual Studio Code na versão 1.84 ou superior instalado
+* Plugin do VS code Extension Pack for Java instalado
+* Plugin do VS code Cucumber instalado
+
+### **Passo a Passo**
+* Clique em "code"
+* Clique em "Download Zip" para baixar arquivo zipado
+* Acesse a área de Downloads do seu PC
+* Encontre o arquivo zipado baixado
+* Descompacte/extraia a pasta do arquivo zipado
+* Abra o Visual Studio Code
+* Clique em arquivo/file
+* Clique em abrir pasta/open folder
+* Escolha a pasta do arquivo descompactado
+* No Visual Studio Code, acesse a pasta src>test>runner
+* Dentro da pasta runner, acesse o arquvo TestRunner.java
+* Ao lado da linha 13, clique no Icone de play para executar o projeto
 
 # Links úteis
-[Download Java JDK 11](https://www.oracle.com/br/java/technologies/javase/jdk11-archive-downloads.html)
-[Download Visual Studio Code](https://code.visualstudio.com/)
-[Fonte dos Frameworks](https://mvnrepository.com/) 
-[Fonte da biblioteca](https://github.com/bonigarcia/webdrivermanager)
+
+[Download Java JDK 11](https://www.oracle.com/br/java/technologies/javase/jdk11-archive-downloads.html) [Download Visual Studio Code](https://code.visualstudio.com/) [Fonte dos Frameworks](https://mvnrepository.com/) [Fonte da biblioteca](https://github.com/bonigarcia/webdrivermanager)
