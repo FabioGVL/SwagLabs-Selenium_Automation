@@ -1,15 +1,25 @@
 #  Escopo do Projeto
 Este documento detalha a estratégia de automação de testes para a plataforma **Swag Labs**, utilizando o ecossistema Java. O foco é a validação do fluxo de autenticação através do Desenvolvimento Orientado a Comportamento (**BDD**), garantindo que as regras de negócio de login sejam respeitadas tanto em cenários de sucesso quanto em tentativas inválidas (campos vazios, dados incorretos e caracteres especiais).
 
-##  2. TECNOLOGIAS UTILIZADAS
-* **Linguagem:** Java 11
-* **Framework de Automação:** [Selenium WebDriver](https://www.selenium.dev/) (v4.15.0)
-* **BDD/Gherkin:** [Cucumber Java](https://cucumber.io/) (v7.14.0)
-* **Runner & Assertions:** [JUnit 5](https://junit.org/junit5/)
-* **Gerenciador de Dependências:** Maven
-* **IDE:** VS Code (com Extension Pack for Java)
+## Escopo do Teste
 
-##  3. ARQUITETURA E ESTRUTURA
+### 1. Mapeamento de Features:
+* **Interface de Login:** Portal de entrada com validação de credenciais.
+* **Gestão de Inventário:** Visualização e seleção de produtos.
+
+### 2. Features Testadas:
+* **Login Data-Driven:** Execução de múltiplos cenários de login (sucesso, falha, campos vazios) utilizando a mesma estrutura de teste via BDD.
+* **Ciclo de Vida do Navegador:** Gerenciamento automático de abertura e fechamento das instâncias do ChromeDriver.
+
+### 3. Massa de Dados para Teste:
+* Utilização de tabelas de exemplos no Gherkin para injetar variadas combinações de usuário e senha diretamente nos steps.
+
+### 4. Tipos de Testes Utilizados:
+* **Testes de Funcionalidade:** Verificar se as funcionalidades de autenticação estão operando conforme as regras de negócio.
+* **Testes de Usabilidade:** Avaliar a clareza das mensagens de erro e a fluidez da navegação entre a tela de login e a home.
+* **Testes de Integração:** Garantir a correta interação entre o script Java/Selenium e os elementos da interface web.
+
+## Arquitetura e estrutura
 O projeto segue o padrão de separação de responsabilidades para garantir manutenibilidade:
 
 * Escrita de cenários em Gherkin utilizando arquivos `.feature`, facilitando a comunicação entre o time técnico e de negócios.
@@ -19,10 +29,19 @@ O projeto segue o padrão de separação de responsabilidades para garantir manu
 * Configuração do `maven-surefire-plugin` para possibilitar a execução dos testes via linha de comando e integração com ferramentas de CI/CD.
 
 
+## Tecnologias e ambientes utilizados para execução do projeto:
+* Java 11
+* [Selenium WebDriver](https://www.selenium.dev/) (v4.15.0)
+* [Cucumber Java](https://cucumber.io/) (v7.14.0)
+* [JUnit 5](https://junit.org/junit5/)
+* Maven
+* **IDE:** VS Code (com Extension Pack for Java)
 
-##  4. COMO EXECUTAR O PROJETO
 
-### **Pré-requisitos**
+
+## Passos para reproduzir o teste
+
+### 1. **Pré-requisitos**
 * Java JDK 11 (Configurado no `JAVA_HOME`)
 * Maven instalado
 * ChromeDriver compatível com a sua versão do navegador Chrome (posicionado no caminho configurado em `System.setProperty`)
@@ -32,7 +51,7 @@ O projeto segue o padrão de separação de responsabilidades para garantir manu
 * Plugin do VS code Extension Pack for Java instalado
 * Plugin do VS code Cucumber instalado
 
-### **Passo a Passo**
+### 1.2 **Passo a Passo**
 * Clique em "code"
 * Clique em "Download Zip" para baixar arquivo zipado
 * Acesse a área de Downloads do seu PC
