@@ -12,11 +12,11 @@ Este documento detalha a estratégia de automação de testes para a plataforma 
 ##  3. ARQUITETURA E ESTRUTURA
 O projeto segue o padrão de separação de responsabilidades para garantir manutenibilidade:
 
-* **Behavior Driven Development (BDD):** Escrita de cenários em linguagem natural (Português) utilizando arquivos `.feature`, facilitando a comunicação entre o time técnico e de negócios.
-* **Data-Driven Testing (Gherkin Examples):** Implementação de uma matriz de testes no arquivo de feature, permitindo a execução de múltiplos casos de teste (sucesso, falha, borda) reutilizando os mesmos steps.
-* **Cucumber Hooks:** Uso de `@Before` e `@After` para gerenciar o ciclo de vida do WebDriver, garantindo que o navegador seja aberto e fechado corretamente em cada cenário.
-* **Wait Strategies:** Implementação de `Implicit Wait` para lidar com a latência de renderização de elementos web.
-* **Maven Lifecycle:** Configuração do `maven-surefire-plugin` para possibilitar a execução dos testes via linha de comando e integração com ferramentas de CI/CD.
+* Escrita de cenários em Gherkin utilizando arquivos `.feature`, facilitando a comunicação entre o time técnico e de negócios.
+* Implementação de uma matriz de testes no arquivo de feature, permitindo a execução de múltiplos casos de teste (sucesso e falha) reutilizando os mesmos steps.
+* Uso de `@Before` e `@After` para gerenciar o ciclo de vida do WebDriver, garantindo que o navegador seja aberto e fechado corretamente em cada cenário.
+* Implementação de `Implicit Wait` para lidar com a latência de renderização de elementos web.
+* Configuração do `maven-surefire-plugin` para possibilitar a execução dos testes via linha de comando e integração com ferramentas de CI/CD.
 
 
 
