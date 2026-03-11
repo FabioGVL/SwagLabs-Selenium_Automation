@@ -1,6 +1,4 @@
-#  PROJETO DE AUTOMAÇÃO: SWAG LABS (JAVA & SELENIUM BDD)
-
-##  1. OBJETIVO DO DOCUMENTO
+#  Escopo do Projeto
 Este documento detalha a estratégia de automação de testes para a plataforma **Swag Labs**, utilizando o ecossistema Java. O foco é a validação do fluxo de autenticação através do Desenvolvimento Orientado a Comportamento (**BDD**), garantindo que as regras de negócio de login sejam respeitadas tanto em cenários de sucesso quanto em tentativas inválidas (campos vazios, dados incorretos e caracteres especiais).
 
 ##  2. TECNOLOGIAS UTILIZADAS
